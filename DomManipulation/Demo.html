@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+    function callme(){
+    let s = document.getElementById("pr")
+    alert(s);
+    alert(s.nodeName)
+    alert(s.childNodes[0].nodeValue)
+    alert(s.childNodes[0].nodeName)
+    alert(s.childNodes[0].nodeType)
+    alert(s.innerHTML)
+    alert("now accesing 2 children")
+    alert(s.childNodes[2].nodeValue)
+    alert(s. childNodes[1].childNodes[0].nodeValue)
+    alert("accessing of")
+    alert(s.childNodes[1].childNodes[2].nodeValue)
+   // s.childNodes[1].style.color = "red"
+    }
+</script>
+</head>
+
+<body>
+  <p onmouseover="callme()" id="pr">welocome<b> to<span>world</span>of</b> Dom</p>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body></body>
+<h1>Store And Retrieve Data</h1>
+<p id="demo"></p>
+<input type="button" value="set json string" onclick="go()"/>
+  <input type="button" value="get object" onclick="getdata()"/>
+  <script>
+    var myobj,myjson,text,obj;
+    function go(){
+      myobj ={
+        name:"rinkesh",
+        age :24,
+        city:"Dhule"
+      }
+      myjson = JSON.stringify(myobj);
+     // sessionStorage.setItem("sesdata",myjson);
+      localStorage.setItem("testdata", myjson);
+    }
+     function getdata(){
+      text = localStorage.getItem("testdata");
+      //text=sessionStorage.getItem("sesdata");
+      obj = JSON.parse(text);
+      document.getElementById("demo").innerHTML= obj.name + " " + obj.age+" " + obj.city;
+     }
+  </script>
+  
+</body>
+</html>
